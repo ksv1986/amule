@@ -1,0 +1,5 @@
+Package files for OpenWRT 18.06
+
+Tested on ramips mt7621.
+
+Unfortunately I was not able to properly autoconfigure amule, so had to disable gettext usage (see amule.patch) to get amuled to compile.
