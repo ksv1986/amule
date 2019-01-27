@@ -1,0 +1,44 @@
+diff --git a/Makefile.am b/Makefile.am
+index 29aa3d55a..967a68788 100644
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -1,15 +1,14 @@
+ SUBDIRS =
+ 
+ if COMPILE_NLS
+-SUBDIRS += intl po
++#SUBDIRS += intl po
+ endif
+ 
+ SUBDIRS += docs src unittests
+ 
+ EXTRA_DIST = amule.rc amule.ico amule.png convert.ico \
+-	README.Debian-Packages aMule-CVS.spec aMule.spec \
+-	amule_build_install.sh autogen.sh \
+-	po/l10n.xsl
++	aMule-CVS.spec aMule.spec \
++	amule_build_install.sh autogen.sh
+ 
+ dist_icon_DATA =
+ icondir = $(datadir)/pixmaps
+diff --git a/configure.ac b/configure.ac
+index 36a5f9588..3e63d4cfc 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -455,11 +455,7 @@ dnl Generate the Makefiles
+ AC_CONFIG_FILES([Makefile
+ 		 docs/Makefile
+ 		 docs/man/Makefile
+-		 intl/Makefile
+-		 po/Makefile.in
+ 		 src/Makefile
+-		 src/pixmaps/Makefile
+-		 src/pixmaps/flags_xpm/Makefile
+ 		 src/libs/Makefile
+ 		 src/libs/ec/Makefile
+ 		 src/libs/ec/cpp/Makefile
+diff a/README b/README
+--- a/README
++++ b/README
+@@ -0,0 +1 @@
++

@@ -4,12 +4,6 @@
 # The location, where the bison executable can be found
 #SET (BISON_EXECUTABLE "${CMAKE_SOURCE_DIR}/../win_flex_bison-latest/win_bison.exe")
 
-# The location, where to find the crypto++ header-files
-#SET (CRYTOPP_HEADER_PATH "${CMAKE_SOURCE_DIR}/../cryptopp")
-
-# The location, where the linkable output of crypto++ compilation can be found.
-#SET (CRYTOPP_LIB_SEARCH_PATH "${CMAKE_SOURCE_DIR}/../cryptopp/Win32/Output/Debug")
-
 # The location, where the flex executable can be found
 #SET (FLEX_EXECUTABLE "${CMAKE_SOURCE_DIR}/../win_flex_bison-latest/win_flex.exe")
 

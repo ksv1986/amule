@@ -85,6 +85,7 @@ IF (BUILD_AMULECMD)
 		mulecommon
 		mulesocket
 		ec
+		${OPENSSL_CRYPTO_LIBRARY}
 		${ZLIB_LIBRARIES}
 	)
 
@@ -147,6 +148,7 @@ IF (BUILD_DAEMON)
 		mulecommon
 		mulesocket
 		${wxWidgets_NET_LIBRARIES}
+		${OPENSSL_CRYPTO_LIBRARY}
 		${ZLIB_LIBRARIES}
 	)
 
@@ -241,6 +243,7 @@ IF (BUILD_MONOLITHIC)
 		${wxWidgets_GUI_LIBRARIES}
 		${wxWidgets_NET_LIBRARIES}
 		${wxWidgets_BASE_LIBRARIES}
+		${OPENSSL_CRYPTO_LIBRARY}
 		${ZLIB_LIBRARIES}
 	)
 
@@ -323,6 +326,7 @@ IF (BUILD_REMOTEGUI)
 		${wxWidgets_ADV_LIBRARIES}
 		${wxWidgets_GUI_LIBRARIES}
 		${wxWidgets_NET_LIBRARIES}
+		${OPENSSL_CRYPTO_LIBRARY}
 		${ZLIB_LIBRARIES}
 	)
 
