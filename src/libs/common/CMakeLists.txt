@@ -9,6 +9,10 @@ ADD_LIBRARY (mulecommon STATIC
 	TextFile.cpp
 )
 
+TARGET_INCLUDE_DIRECTORIES (mulecommon
+	PRIVATE ${OPENSSL_INCLUDE_DIR}
+)
+
 TARGET_COMPILE_DEFINITIONS (mulecommon
 	PRIVATE "${wxWidgets_BASE_DEFS}"
 )

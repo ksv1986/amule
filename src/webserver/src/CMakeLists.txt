@@ -38,7 +38,8 @@ IF (WIN32)
 ENDIF (WIN32)
 
 TARGET_COMPILE_DEFINITIONS (amuleweb
-	PRIVATE ${wxWidgets_BASE_DEFS}
+	PRIVATE "wxUSE_GUI=0"
+	PRIVATE ${wxWidgets_DEFINITIONS}
 )
 
 TARGET_INCLUDE_DIRECTORIES (amuleweb
@@ -55,20 +56,13 @@ TARGET_LINK_LIBRARIES (amuleweb
 	ec
 	mulecommon
 	mulesocket
-	${wxWidgets_BASE_LIBRARIES}
+	${wxWidgets_LIBRARIES}
 	${ZLIB_LIBRARIES}
 )
 
 IF (ENABLE_BOOST)
 	TARGET_LINK_LIBRARIES (amuleweb
 		boost_system
-	)
-	TARGET_COMPILE_DEFINITIONS (amuleweb
-		PRIVATE ${wxWidgets_NET_DEFS}
-	)
-ELSE (ENABLE_BOOST)
-	TARGET_LINK_LIBRARIES (amuleweb
-		${wxWidgets_NET_LIBRARIES}
 	)
 ENDIF (ENABLE_BOOST)
 
