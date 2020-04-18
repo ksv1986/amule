@@ -1,0 +1,36 @@
+ADD_LIBRARY (ec STATIC
+	ECMuleSocket.cpp
+	ECPacket.cpp
+	ECSpecialTags.cpp
+	ECSocket.cpp
+	ECTag.cpp
+	ECUInt128.cpp
+	RemoteConnect.cpp
+)
+
+ADD_DEPENDENCIES (ec
+	generate_ECCodes.h
+	generate_ECTagTypes.h
+)
+
+TARGET_COMPILE_DEFINITIONS (ec
+	PRIVATE wxUSE_GUI=0
+)
+
+TARGET_INCLUDE_DIRECTORIES (ec
+	PUBLIC ${CMAKE_CURRENT_BINARY_DIR}
+	PUBLIC ${INCLUDE_INCLUDE_DIR}
+	PUBLIC ${LIBS_INCLUDE_DIR}
+)
+
+IF (ENABLE_BOOST)
+	TARGET_INCLUDE_DIRECTORIES (ec
+		PUBLIC ${Boost_INCLUDE_DIR}
+	)
+ENDIF (ENABLE_BOOST)
+
+TARGET_LINK_LIBRARIES (ec
+	OpenSSL::Crypto
+	wxWidgets::BASE
+	ZLIB::ZLIB
+)
